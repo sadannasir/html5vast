@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<HTML>
+
+	<HEAD>
+		<TITLE>HTML5VAST</TITLE>
+		
+		<!-- HTML5VAST -->
+		<script src="html5vast.js"></script>
+		<link rel="stylesheet" href="html5vast.css" type="text/css"/>
+
+	</HEAD>
+		
+	
+	<BODY>
+		
+		<p>FIRST PARA FIRST PARA FIRST PARA FIRST PARA FIRST PARA FIRST PARA FIRST PARA FIRST PARA FIRST PARA FIRST PARA FIRST PARA </p>
+		<VIDEO name='test-video' id='test-video' width="500" height="350" controls>
+			<source src='vid.mp4' type='video/mp4' />		
+		</VIDEO>
+		<p>SECOND PARA SECOND PARA SECOND PARA SECOND PARA SECOND PARA SECOND PARA SECOND PARA SECOND PARA SECOND PARA SECOND PARA </p>
+		
+		<script>
+		
+			//Test HTML5VAST
+			var my_vast_url = 'http://ad3.liverail.com/?LR_PUBLISHER_ID=1331&LR_CAMPAIGN_ID=229&LR_SCHEMA=vast2';
+			var html5vast_options = {
+					'ad_caption': 'Ad'
+				};			
+			//var obj_vast = h5vReadFile(my_vast_url,html5vast_options);
+			////alert(obj_vast.media_file);
+			//h5vPreRoll('test-video',obj_vast, html5vast_options);
+			////alert(document.getElementById('test-video').getElementsByTagName("source")[0].getAttribute("src"));
+			html5vast("test-video",my_vast_url,{
+				ad_caption: 'Advertisement'	
+			});
+		</script>
+
+	</BODY>
+
+</HTML>
